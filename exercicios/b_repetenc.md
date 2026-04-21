@@ -1,5 +1,6 @@
 # Exercícios com repetições encaixadas
 
+[Todos os exercícios](../exercicios)
 [Link original](https://www.ime.usp.br/~macmulti/exercicios/repetenc/index.html)
 
 ## 1
@@ -63,3 +64,9 @@ Exemplos:
 Dado `n > 1` e uma seqüência com `n` inteiros, verificar se existe um inteiro `k > 1`
 tal que a sequência é `k`-alternante. Dê como saída também o valor de `k` caso
 a sequência seja alternante.
+
+[Solução](../src/b_repetenc/ex_08.zig)
+
+<br>
+
+[Todos os exercícios](../exercicios)

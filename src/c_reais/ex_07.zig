@@ -1,6 +1,10 @@
 // Exercício 7 de https://www.ime.usp.br/~macmulti/exercicios/reais/index.html
-// Dados x real e n natural, calcular uma aproximação para cos x através dos n primeiros termos da seguinte série:
-// cos x = 1 - x^2/2! + x^4/4! - x^6/6! ... + (-1)^k x^2k/(2k)!
+// Dados x e epsilon reais, epsilon > 0, calcular uma aproximação para sen x através da seguinte série infinita
+// sen x = x/1! - x^3/3! + x^5/5! - ... + (-1)^k x^(2k + 1)/(2k + 1)!
+// incluindo todos os termos até que
+// | x^(2k + 1)| / (2k + 1)! < epsilon
+// Compare com os resultados de sua calculadora!
+
 
 const std = @import("std");
 const pow = std.math.pow;

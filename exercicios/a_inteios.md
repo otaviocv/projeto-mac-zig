@@ -1,5 +1,6 @@
 # Exercícios com Inteiros
 
+[Todos os exercícios](../exercicios)
 [Link original](https://www.ime.usp.br/~macmulti/exercicios/inteiros/index.html)
 
 ## 1
@@ -210,3 +211,7 @@ Dados:
 [Implementação em C](../src/a_inteiros/ex_25.c)
 [Implementação em Zig](../src/a_inteiros/ex_25.zig)
 [Resultado da simulação](../src/a_inteiros/ex_25_output.txt)
+
+<br>
+
+[Todos os exercícios](../exercicios)

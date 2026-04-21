@@ -1,6 +1,8 @@
 // Exercício 6 de https://www.ime.usp.br/~macmulti/exercicios/reais/index.html
 // Dados x real e n natural, calcular uma aproximação para cos x através dos n primeiros termos da seguinte série:
 // cos x = 1 - x^2/2! + x^4/4! - x^6/6! ... + (-1)^k x^2k/(2k)!
+// Compare com os resultados de sua calculadora!
+
 
 const std = @import("std");
 const pow = std.math.pow;
