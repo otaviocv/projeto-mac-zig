@@ -73,3 +73,21 @@ $$
 Data uma matriz quadrada $A_{nxn}$, verificar se $A$ é quadrado mágico.
 
 [Solução](../src/g_matrizes/ex_07.zig)
+
+## 8
+(MAT 83)
+
+### a
+Imprimir as `n` primeiras linhas do triângulo de Pascal.
+```
+1                                                                                 
+1  1                                                                  
+1  2  1                                                  
+1  3  3  1                                  
+1  4  6  4  1                  
+1  5 10 10  5  1
+```
+
+### b
+Imprimir as `n` primeiras linhas do triângulo de Pascal usando apenas um vetor.
+

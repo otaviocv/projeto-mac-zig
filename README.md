@@ -47,6 +47,9 @@ por alguns estilos Zig eu tentei levemente incorporar conceitos Zig. Essa lista 
 primeira experiência com Zig e ela segue ainda um estilo "C", sem se apropriar extensamente
 dos recursos da linguagem.
 
+Minha expectativa é de que depois de resolver os [ziglings](https://codeberg.org/ziglings/exercises)
+eu possa voltar e fazer o contraste com o meu primeiro contato com a linguagem.
+
 ## Executando as soluções
 
 Para executar cada exercício:
