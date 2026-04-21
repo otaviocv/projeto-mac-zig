@@ -1,23 +1,16 @@
-// Exercício 5 de https://www.ime.usp.br/~macmulti/exercicios/matrizes/index.html
-// Dizemos que uma matriz inteira $A_{nxn}$ é uma matriz de permutação se em cada
-// linha e em cada coluna houver `n-1` elementos nulos e um único elemento igual a `1`.
-// Exemplo:
-// A matriz abaixo é de permutação:
+// Exercício 7 de https://www.ime.usp.br/~macmulti/exercicios/matrizes/index.html
+// Dizemos que uma matriz $A_{nxn}$ é um _quadrado mágico_ se a soma dos elementos
+// de cada linha, a soma dos elementos de cada coluna e a soma dos elementos das
+// diagonais principal e secundária são todas iguais.
 //
-//    │ 0 1 0 0 │
-//    │ 0 0 1 0 │
-//    │ 1 0 0 0 │
-//    │ 0 0 0 1 │
+// Exemplo: A matriz
 //
-// Observe que:
+//    │  8  0  7 │
+//    │  4  5  6 │
+//    │  3 10  2 │
+// é um quadrado mágico
 //
-//    │  2 -1  0 │
-//    │ -1  2  0 │
-//    │  0  0  1 │
-//
-// Não é de permutação.
-//
-// Data uma matriz $A_{nxn}$, verificar se $A$ é de permutação.
+// Data uma matriz quadrada $A_{nxn}$, verificar se $A$ é quadrado mágico.
 
 const std = @import("std");
 const assert = std.debug.assert;
@@ -38,30 +31,42 @@ pub fn main() !void {
     var matriz: [MAX][MAX]i32 = undefined;
     try read_matriz_quadrada(&n, &matriz, stdout, stdin);
 
-    var perm = true;
-    for (0..n) |linha| {
-        var count_nulos: u32 = 0;
-        var count_ones: u32 = 0;
-        for (0..n) |coluna| {
-            if (matriz[linha][coluna] == 0) {
-                count_nulos += 1;
-            } else if (matriz[linha][coluna] == 1) {
-                count_ones += 1;
-            }
-        }
+    var magico = true;
 
-        if (!(count_nulos == (n-1) and count_ones == 1)) {
-            perm = false;
+
+    var soma_ref: i32 = 0;
+    for (0..n) |i| {
+        soma_ref += matriz[i][i];
+    }
+
+    // linhas
+    for (0..n) |i| {
+        var soma: i32 = 0;
+        for (0..n) |j| {
+            soma += matriz[i][j];
+        }
+        if (soma != soma_ref) {
+            magico = false;
+            break;
+        }
+    }
+    // colunas
+    for (0..n) |j| {
+        var soma: i32 = 0;
+        for (0..n) |i| {
+            soma += matriz[i][j];
+        }
+        if (soma != soma_ref) {
+            magico = false;
             break;
         }
     }
 
-    if (perm) {
-        try stdout.print("é permutação", .{});
+    if (magico) {
+        try stdout.print("é mágico ({d})\n", .{soma_ref});
     } else {
-        try stdout.print("não é permutação", .{});
+        try stdout.print("não é mágico :(\n", .{});
     }
-    try stdout.print("\n", .{});
     try stdout.flush();
 }
 

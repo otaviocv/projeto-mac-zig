@@ -1,8 +1,15 @@
-// Exercício 4 de https://www.ime.usp.br/~macmulti/exercicios/matrizes/index.html
-// Dada uma matriz real Amxn, verificar se existem elementos repetidos em A.
+// Exercício 6 de https://www.ime.usp.br/~macmulti/exercicios/matrizes/index.html
+// Dada uma matriz $A_{mxn}$, imprimir o número de linhas e o número de 
+// colunas nulas da matriz.
+// Exemplo: `m = 4` e `n = 4`
 //
-// Nota do resolvedor: Não pode usar hashmap!
-// Só vou fazer um array simples, nem ordenado.
+//    │ 1 0 2 3 │
+//    │ 4 0 5 6 │
+//    │ 0 0 0 0 │
+//    │ 0 0 0 0 │
+//
+// tem 2 linhas nulas e 1 coluna nula.
+
 
 const std = @import("std");
 const assert = std.debug.assert;
@@ -24,34 +31,38 @@ pub fn main() !void {
     var matriz: [MAX][MAX]i32 = undefined;
     try read_matrix(&m, &n, &matriz, stdout, stdin);
 
-    var vistos: [MAX]i32 = undefined;
-    var size: u32 = 0;
-    var repetidos: [MAX]i32 = undefined;
-    var repetidos_size: u32 = 0;
-
+    // linhas nulas
+    var linhas_nulas: u32 = 0;
     for (0..m) |i| {
+        var nulos: u32 = 0;
         for (0..n) |j| {
-            const val = matriz[i][j];
-            if (!visto(val, vistos, size)) {
-                size = adiciona(val, &vistos, size);
-            } else {
-                repetidos_size = adiciona(val, &repetidos, repetidos_size);
+            if (matriz[i][j] == 0) {
+                nulos += 1;
             }
         }
-    }
 
-    if (repetidos_size == 0) {
-        try stdout.print("Nenhum elemento repetido.", .{});
-    } else {
-        try stdout.print("Repetidos: ", .{});
-        for (0..repetidos_size) |i| {
-            try stdout.print("{d} ", .{repetidos[i]});
+        if (nulos == n) {
+            linhas_nulas += 1;
         }
     }
-    try stdout.print("\n", .{});
 
+    // colunas nulas
+    var colunas_nulas: u32 = 0;
+    for (0..n) |j| {
+        var nulos: u32 = 0;
+        for (0..m) |i| {
+            if (matriz[i][j] == 0) {
+                nulos += 1;
+            }
+        }
 
+        if (nulos == m) {
+            colunas_nulas += 1;
+        }
+    }
 
+    try stdout.print("Linhas nulas: {d}\n", .{linhas_nulas});
+    try stdout.print("Colunas nulas: {d}\n", .{colunas_nulas});
     try stdout.flush();
 }
 
@@ -84,17 +95,4 @@ fn read_matrix(m: *u32, n: *u32, container: *[MAX][MAX]i32, stdout: *std.Io.Writ
         stdin.toss(1);
         container.*[i][n.*-1] = num;
     }
-}
-
-fn visto(val: i32, vistos: [MAX]i32, tamanho: u32) bool {
-    for (0..tamanho) |i| {
-        if (val == vistos[i]) return true;
-    }
-    return false;
-}
-
-fn adiciona(val: i32, vistos: *[MAX]i32, tamanho: u32) u32 {
-    assert(tamanho <= MAX);
-    vistos.*[tamanho] = val;
-    return tamanho + 1;
 }

@@ -1,7 +1,6 @@
 // Exercício 4 de https://www.ime.usp.br/~macmulti/exercicios/vetores/index.html
-// Tentando descobrir se um dado era viciado, um dono de cassino honesto (ha! ha! ha! ha!)
-// o lançou n vezes. Dados os n resultados dos lançamentos, determinar o número de
-// ocorrências de cada face.
+// Dados dois vetores x e y, ambos com n elementos, determinar o produto escalar desses vetores.
+
 
 const std = @import("std");
 const assert = std.debug.assert;
