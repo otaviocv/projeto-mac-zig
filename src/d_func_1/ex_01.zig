@@ -1,5 +1,5 @@
 // Exercício 1 de https://www.ime.usp.br/~macmulti/exercicios/funcoes1/index.html
-// 1.  Um número a é dito permutação de um número b se os dígitos de a formam uma permutação dos dígitos de b.
+// Um número a é dito permutação de um número b se os dígitos de a formam uma permutação dos dígitos de b.
 // Exemplo:   5412434 é uma permutação de 4321445, mas não é uma permutação de 4312455.
 // Obs.: Considere que o dígito 0 (zero) não aparece nos números.
 // (a) Faça uma função contadígitos que dados um inteiro n e um inteiro d, 0 < d < 9, devolve quantas vezes o dígito d aparece em n.
