@@ -14,7 +14,7 @@ Determinar o montante de cada mês durante este período.
 ## 2
 Dado um natural `n`, determine o número harmônico $H_n$ definido por:
 
-$$ H_n = sum_{k=1}_{n} 1/k $$
+$$ H_n = \sum_{k=1}^{n} 1/k $$
 
 [Solução](../src/c_reais/ex_02.zig)
 
