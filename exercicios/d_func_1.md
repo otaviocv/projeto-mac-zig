@@ -1,6 +1,7 @@
 # Exercícios com Funções - Parte I
 
 [Todos os exercícios](../exercicios)
+
 [Link original](https://www.ime.usp.br/~macmulti/exercicios/funcoes1/index.html)
 
 ## 1
@@ -214,5 +215,7 @@ Dados:
 ```
 
 [Implementação em C](../src/d_func_1/ex_07.c)
+
 [Implementação em Zig](../src/d_func_1/ex_07.zig)
+
 [Resultado da simulação](../src/d_func_1/ex_07_output.txt)
