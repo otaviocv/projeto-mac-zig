@@ -33,7 +33,8 @@ Determinar em que dia desse mês ocorreu a maior venda e qual foi a quantidade d
 [Solução](../src/a_inteiros/ex_05.zig)
 
 ## 6
-Dados o número n de alunos de uma turma de Introdução aos Autômatos a Pilha (MAC 414)
+Dados o número n de alunos de uma turma de Introdução aos Autômatos a Pilha
+([MAC0414](https://uspdigital.usp.br/jupiterweb/obterDisciplina?sgldis=MAC0414&verdis=5))
 e suas notas da primeira prova, determinar a maior e a menor nota obtidas por essa turma
 (Nota máxima = 100 e nota mínima = 0).
 

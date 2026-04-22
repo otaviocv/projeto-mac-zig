@@ -122,3 +122,7 @@ Seu programa deve obrigatoriamente utilizar a função do item anterior, mesmo q
 você não a tenha feito.
 
 [Solução](../src/e_func_2/ex_06.zig)
+
+<br>
+
+[Todos os exercícios](../exercicios)

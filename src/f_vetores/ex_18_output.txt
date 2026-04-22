@@ -1,0 +1,7 @@
+Digite n:
+n = 7
+Digite uma sequencia de 7 numeros.
+10 3 6 12 13 7 15
+7 3 6 12 13 12 15
+7 3 6 12 13 12 15
+7 3 6 10 13 12 15

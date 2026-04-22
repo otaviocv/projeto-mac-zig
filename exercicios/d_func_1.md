@@ -219,3 +219,7 @@ Dados:
 [Implementação em Zig](../src/d_func_1/ex_07.zig)
 
 [Resultado da simulação](../src/d_func_1/ex_07_output.txt)
+
+<br>
+
+[Todos os exercícios](../exercicios)
