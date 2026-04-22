@@ -13,6 +13,7 @@ Determinar o montante de cada mês durante este período.
 
 ## 2
 Dado um natural `n`, determine o número harmônico $H_n$ definido por:
+
 $$ H_n = sum_{k=1}_{n} 1/k $$
 
 [Solução](../src/c_reais/ex_02.zig)
@@ -30,8 +31,9 @@ Dados `n` pontos reais `(x,y)`, verifique se cada ponto pertence ou não a `H`.
 ## 4
 (GEO 84) Considere o conjunto $H = H1 \uplus H2$ de pontos reais, onde
 
-$$ H1 = {(x, y) | x <= 0, y <= 0, y + x^2 + 2x - 3 <= 0}
-   H2 = {(x, y) | x >= 0, y + x^2 - 2x - 3 <= 0} $$
+$$ H1 = {(x, y) | x <= 0, y <= 0, y + x^2 + 2x - 3 <= 0} $$
+
+$$   H2 = {(x, y) | x >= 0, y + x^2 - 2x - 3 <= 0} $$
 
 Faça um programa que lê uma seqüência de `n` pontos reais `(x,y)`
 e verifica se cada ponto pertence ou não ao conjunto $H$.
@@ -54,7 +56,7 @@ da forma $ax^2 + bx + c = 0$. Imprimir a solução em uma das seguintes formas:
 Dados `x` real e `n` natural, calcular uma aproximação para $cos(x)$
 através dos `n` primeiros termos da seguinte série:
 
-$$ cos(x) = 1 - x^2/2! + x^4/4! - x^6/6! ... + (-1)^k x^2k/(2k)! $$
+$$ cos(x) = 1 - x^2/2! + x^4/4! - x^6/6! + ... + (-1)^k x^2k/(2k)! $$
 
 Compare com os resultados de sua calculadora!
 
@@ -63,11 +65,11 @@ Compare com os resultados de sua calculadora!
 ## 7
 Dados `x` e $\epsilon$ reais, $\epsilon > 0$, calcular uma aproximação para sen x através da seguinte série infinita
 
-$$ sen x = x/1! - x^3/3! + x^5/5! - ... + (-1)^k x^(2k + 1)/(2k + 1)! $$
+$$ sen x = x/1! - x^3/3! + x^5/5! - ... + (-1)^k x^{2k + 1}/(2k + 1)! $$
 
 incluindo todos os termos até que
 
-$$ | x^(2k + 1)| / (2k + 1)! < \epsilon $$
+$$ | x^{2k + 1}| / (2k + 1)! < \epsilon $$
 
 Compare com os resultados de sua calculadora!
 
@@ -100,13 +102,16 @@ população de Nova York tem um crescimento anual de `y` determine:
 
 ## 11
 Dado um inteiro positivo `n`, calcular e imprimir o valor da seguinte soma:
+
 $$ 1/n + 2/(n-1) + 3/(n-2) ... + n/1 $$
 
 [Solução](../src/c_reais/ex_11.zig)
 
 ## 12
 Faça um programa que calcula a soma
+
 $$  1 -1/2 + 1/3 - 1/4 ... 1/9999 - 1/10000 $$
+
 pelas seguintes maneiras:
 - adição dos termos da direita para a esquerda;
 - adição dos termos da esquerda para a direita;
