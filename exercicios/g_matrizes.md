@@ -91,3 +91,8 @@ Imprimir as `n` primeiras linhas do triângulo de Pascal.
 ### b
 Imprimir as `n` primeiras linhas do triângulo de Pascal usando apenas um vetor.
 
+[Solução](../src/g_matrizes/ex_08.zig)
+
+## 9
+
+[Solução](../src/g_matrizes/ex_09.zig)

@@ -54,4 +54,17 @@ Observações:
 [Solução](../src/f_vetores/ex_05.zig)
 
 ## 6
+(COMP 89) Dados dois strings (um contendo uma frase e outro contendo uma palavra),
+determine o número de vezes que a palavra ocorre na frase.
 
+Exemplo:
+Para a palavra ANA e a frase :
+```
+   ANA E MARIANA GOSTAM DE BANANA
+   ---       ---            -----
+```
+Temos que a palavra ocorre 4 vezes na frase.
+
+[Solução](../src/f_vetores/ex_06.zig)
+
+## 7
