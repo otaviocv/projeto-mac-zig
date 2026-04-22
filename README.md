@@ -68,3 +68,30 @@ ou achar uma solução mais graciosa ou elegante,
 especialmente quanto ao estilo da linguagem e os usos eficientes da linguagem,
 será um prazer incluí-la como parte da lista. Para
 um exercício eu já coloquei uma solução alternativa e será muito divertido incluir mais!
+
+## Copyright e Licença
+
+Na [página original "Sobre as Listas de Exercícios"](https://www.ime.usp.br/~macmulti/exercicios/sobre.html) dessas listas consta o seguinte texto (na íntegra):
+
+> Copyright © janeiro'00 pelo Departamento de Ciência da Computação da Universidade de São Paulo (DCC-IME-USP).
+>
+> Todos os direitos reservados. É permitida a reprodução total ou parcial desta lista de exercícios, sem o pagamento de direitos autorais,
+> contanto que as cópias sejam feitas e distribuídas sem fins lucrativos. O DCC-IME-USP lembra que o título e a data da publicação
+> devem constar na cópia e também deve constar que a cópia foi feita com a permissão do Departamento de Ciência da Computação.
+> Caso contrário, a cópia ou a reprodução requer o pagamento de taxas e/ou a permissão por escrito.
+>
+> Coordenação editorial: Equipe dos cursos de Introdução à Computação.
+>
+> Departamento de Ciência da Computação do IME-USP
+>
+> Rua do Matão 1010
+> CEP 05508-900 São Paulo - SP
+> e-mail: dcc@ime.usp.br
+> http://www.ime.usp.br/dcc/
+> 
+> Críticas (construtivas) e sugestões são bem vindas e podem ser encaminhadas para macmulti@ime.usp.br.
+> O prêmio dado por erro encontrado ainda não foi fixado.
+
+O repositório em questão ([https://www.ime.usp.br/~macmulti/exercicios/sobre.html](https://www.ime.usp.br/~macmulti/exercicios/sobre.html))
+reproduz os exercícios integralmente e obedece todas as instruções descritas acima, especialmente a distribuição livre e sem fins lucrativos.
+Trabalhos subsequentes devem ser subordinados às instruções acimas. O texto acima é reproduzido em [LICENSE](./LICENSE).
