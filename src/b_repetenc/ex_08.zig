@@ -1,17 +1,17 @@
 // Exercício 8 de https://www.ime.usp.br/~macmulti/exercicios/repetenc/index.html
-// (POLI 97) Dizemos que uma seqüência de inteiros positivos é k-alternante 
+// (POLI 97) Dizemos que uma sequência de inteiros positivos é k-alternante 
 // se for composta alternadamente por segmentos de números pares de tamanho k
 // e segmentos de números ímpares de tamanho k.
 //
 // Exemplos:
-//   1. A seqüência   1 3 6 8 9 11 2 4 1 7 6 8 é 2-alternante.
-//   2. A seqüência   2 1 4 7 8 9 12 é 1-alternante.
-//   3. A seqüência   4 2 3 1 6 4 2 9 3 não é alternante.
-//   4. A seqüência   1 3 5 é 3-alternante.
+//   1. A sequência   1 3 6 8 9 11 2 4 1 7 6 8 é 2-alternante.
+//   2. A sequência   2 1 4 7 8 9 12 é 1-alternante.
+//   3. A sequência   4 2 3 1 6 4 2 9 3 não é alternante.
+//   4. A sequência   1 3 5 é 3-alternante.
 //
-// Dado n > 1 e uma seqüência com n inteiros, verificar se existe um inteiro k > 1
-// tal que a seqüência é k-alternante. Dê como saída também o valor de k caso
-// a seqüência seja alternante.
+// Dado n > 1 e uma sequência com n inteiros, verificar se existe um inteiro k > 1
+// tal que a sequência é k-alternante. Dê como saída também o valor de k caso
+// a sequência seja alternante.
 
 const std = @import("std");
 

@@ -1,5 +1,5 @@
 // Exercício 1 de https://www.ime.usp.br/~macmulti/exercicios/vetores/index.html
-// Dada uma seqüência de n números, imprimi-la na ordem inversa à da leitura.
+// Dada uma sequência de n números, imprimi-la na ordem inversa à da leitura.
 
 const std = @import("std");
 const assert = std.debug.assert;

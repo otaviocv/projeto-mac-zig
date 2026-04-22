@@ -1,5 +1,5 @@
 // [Exercício 1](../../exercicios/a_inteios.md) de https://www.ime.usp.br/~macmulti/exercicios/inteiros/index.html
-// Dada uma seqüência de números inteiros não-nulos (diferente de zero), seguida por 0, imprimir seus quadrados. 
+// Dada uma sequência de números inteiros não-nulos (diferente de zero), seguida por 0, imprimir seus quadrados. 
 
 const std = @import("std");
 

@@ -1,10 +1,10 @@
 // Exercício 9 de https://www.ime.usp.br/~macmulti/exercicios/vetores/index.html
-// Dadas duas seqüências com n números inteiros entre 0 e 9, interpretadas como
-// dois números inteiros de n algarismos, calcular a seqüência de números que
+// Dadas duas sequências com n números inteiros entre 0 e 9, interpretadas como
+// dois números inteiros de n algarismos, calcular a sequência de números que
 // representa a soma dos dois inteiros.
 // Exemplo: n = 8,
-//     1a  seqüência:      8 2 4 3 4 2 5 1
-//     2ª  seqüência:    + 3 3 7 5 2 3 3 7
+//     1a  sequência:      8 2 4 3 4 2 5 1
+//     2ª  sequência:    + 3 3 7 5 2 3 3 7
 //                       1 1 6 1 8 6 5 8 8
 
 const std = @import("std");

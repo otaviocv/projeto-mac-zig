@@ -73,7 +73,9 @@ Temos que a palavra ocorre 4 vezes na frase.
 compõem a sequência e o número de vezes que cada um deles ocorre na mesma.
 
 Exemplo: `n = 8`
-Seqüência: `-1.7,  3.0,  0.0,  1.5,  0.0, -1.7,  2.3, -1,7`
+
+Sequência: `-1.7,  3.0,  0.0,  1.5,  0.0, -1.7,  2.3, -1,7`
+
 Saída:
 
 1. -1.7 ocorre 3 vezes
@@ -101,8 +103,8 @@ representa a soma dos dois inteiros.
 Exemplo: `n = 8`,
 
 ```
-    1a  seqüência:      8 2 4 3 4 2 5 1
-    2ª  seqüência:    + 3 3 7 5 2 3 3 7
+    1a  sequência:      8 2 4 3 4 2 5 1
+    2ª  sequência:    + 3 3 7 5 2 3 3 7
                       1 1 6 1 8 6 5 8 8
 ```
 
@@ -175,6 +177,7 @@ em cada uma das provas.
 (QUIM 84) Dada uma sequência $x_1, x_2, ..., x_k$ de números inteiros, verifique se
 existem dois segmentos consecutivos iguais nesta sequência, isto é, se existem
 `i` e `m` tais que:
+
 $$    x_i, x_{i+1}, ..., x_{i+m-1} = x_{i+m}, x_{i+m+1}, ..., x_{i+2m-1} $$
 
 Imprima, caso existam, os valores de `i` e `m`.
@@ -191,7 +194,7 @@ existem i=3 e m=2.
 ## 17
 Dada uma sequência de `n` números inteiros, determinar um segmento de soma máxima.
 
-Exemplo: Na seqüência
+Exemplo: Na sequência
 ```
 5, 2, -2, -7, 3, 14, 10, -3, 9, -6, 4, 1
               *   *   *   *  *

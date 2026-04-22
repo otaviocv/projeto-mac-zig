@@ -1,8 +1,8 @@
 // Exercício 6 de https://www.ime.usp.br/~macmulti/exercicios/funcoes1/index.html
 // (a) Escreva uma função que recebe como parâmetros dois números a e b e devolve
 //     o mdc (máximo divisor comum) de a e b, calculado por meio do algoritmo de Euclides.
-// (b) Escreva um programa que leia um inteiro positivo n e uma seqüência de n
-//     inteiros não-negativos e imprime o mdc de todos os números da seqüência.
+// (b) Escreva um programa que leia um inteiro positivo n e uma sequência de n
+//     inteiros não-negativos e imprime o mdc de todos os números da sequência.
 
 
 const std = @import("std");

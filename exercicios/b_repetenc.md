@@ -62,7 +62,7 @@ Exemplos:
 3. A sequência `4 2 3 1 6 4 2 9 3` não é alternante.
 4. A sequência `1 3 5` é `3`-alternante.
 
-Dado `n > 1` e uma seqüência com `n` inteiros, verificar se existe um inteiro `k > 1`
+Dado `n > 1` e uma sequência com `n` inteiros, verificar se existe um inteiro `k > 1`
 tal que a sequência é `k`-alternante. Dê como saída também o valor de `k` caso
 a sequência seja alternante.
 

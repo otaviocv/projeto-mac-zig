@@ -1,7 +1,7 @@
 // Exercício 1 de https://www.ime.usp.br/~macmulti/exercicios/funcoes2/index.html
 // (a) Escreva uma função que recebe um número inteiro n > 0 e devolve o número
 // de dígitos de n e o primeiro dígito de n.
-// (b) Escreva um programa que leia uma seqüência de n inteiros positivos e
+// (b) Escreva um programa que leia uma sequência de n inteiros positivos e
 // imprime o número de dígitos e o primeiro dígito de cada um deles.
 
 const std = @import("std");

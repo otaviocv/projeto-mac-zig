@@ -1,7 +1,7 @@
 // Exercício 8 de https://www.ime.usp.br/~macmulti/exercicios/vetores/index.html
-// Dados dois números naturais m e n e duas seqüências ordenadas com m e n
-// números inteiros, obter uma única seqüência ordenada contendo todos os
-// elementos das seqüências originais sem repetição.
+// Dados dois números naturais m e n e duas sequências ordenadas com m e n
+// números inteiros, obter uma única sequência ordenada contendo todos os
+// elementos das sequências originais sem repetição.
 //
 // Sugestão: Imagine uma situação real, por exemplo, dois fichários de uma biblioteca.
 

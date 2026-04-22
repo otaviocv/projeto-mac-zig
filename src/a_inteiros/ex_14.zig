@@ -1,7 +1,7 @@
 // Exercício 14 de https://www.ime.usp.br/~macmulti/exercicios/inteiros/index.html
 // Um matemático italiano da idade média conseguiu modelar o ritmo de crescimento da população de coelhos (1)
-// através de uma seqüência de números naturais que passou a ser conhecida como seqüência de Fibonacci (2).
-// O n-ésimo número da seqüência de Fibonacci Fn é dado pela seguinte fórmula de recorrência:
+// através de uma sequência de números naturais que passou a ser conhecida como sequência de Fibonacci (2).
+// O n-ésimo número da sequência de Fibonacci Fn é dado pela seguinte fórmula de recorrência:
 // F_1 = 1
 // F_2 = 1
 // F_i = F_i-1 + F_i-2 para i >= 3

@@ -1,6 +1,6 @@
 // Exercício 17 de https://www.ime.usp.br/~macmulti/exercicios/vetores/index.html
-// Dada uma seqüência de n números inteiros, determinar um segmento de soma máxima.
-// Exemplo: Na seqüência 5, 2, -2, -7, 3, 14, 10, -3, 9, -6, 4, 1, a soma do segmento é 33.
+// Dada uma sequência de n números inteiros, determinar um segmento de soma máxima.
+// Exemplo: Na sequência 5, 2, -2, -7, 3, 14, 10, -3, 9, -6, 4, 1, a soma do segmento é 33.
 //                                     *   *   *   *  *
 
 const std = @import("std");

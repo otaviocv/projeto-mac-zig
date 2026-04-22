@@ -8,7 +8,7 @@
 //     dia, mes e ano, representando uma data, e modifica esses inteiros de forma que
 //     eles representem o dia seguinte.
 //
-// (c) Escreva um programa que leia um inteiro positivo n e uma seqüência de n datas
+// (c) Escreva um programa que leia um inteiro positivo n e uma sequência de n datas
 //     e imprime, para cada data, o dia seguinte.
 
 const std = @import("std");

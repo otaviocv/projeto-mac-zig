@@ -6,7 +6,7 @@
 //     o número de alunos da turma;
 //     o cartão de respostas para cada aluno, contendo o seu número e suas respostas.
 //
-// Dada uma seqüência de n números, imprimi-la na ordem inversa à da leitura.
+// Dada uma sequência de n números, imprimi-la na ordem inversa à da leitura.
 
 const std = @import("std");
 const assert = std.debug.assert;

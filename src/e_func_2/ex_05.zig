@@ -5,8 +5,8 @@
 //     número inteiro, 1 se for uma letra (maiúscula ou minúscula) e 2 caso
 //     contrário; e além disso, no caso de ser uma letra, converte para
 //     maiúscula, senão devolve ch inalterado.
-// (b) Escreva um programa que leia uma seqüência de n caracteres e imprima a
-//     seqüência convertida para maiúscula, eliminando os caracteres que não
+// (b) Escreva um programa que leia uma sequência de n caracteres e imprima a
+//     sequência convertida para maiúscula, eliminando os caracteres que não
 //     forem letras ou números.
 //
 // Nota do resolvedor: muita lógica de mudança in-place. Faz tempo que não programo

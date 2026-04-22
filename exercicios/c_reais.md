@@ -35,7 +35,7 @@ $$ H1 = {(x, y) | x <= 0, y <= 0, y + x^2 + 2x - 3 <= 0} $$
 
 $$   H2 = {(x, y) | x >= 0, y + x^2 - 2x - 3 <= 0} $$
 
-Faça um programa que lê uma seqüência de `n` pontos reais `(x,y)`
+Faça um programa que lê uma sequência de `n` pontos reais `(x,y)`
 e verifica se cada ponto pertence ou não ao conjunto $H$.
 O programa deve também contar o número de pontos da sequência que pertencem a $H$.
 
