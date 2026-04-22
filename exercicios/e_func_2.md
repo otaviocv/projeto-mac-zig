@@ -76,6 +76,7 @@ forem letras ou números.
 
 ## 6
 (POLI 94) Considere as seguintes fórmulas de recorrências:
+
 $$
   F_1 = 2;                               G_1 = 1;
   F_2 = 1;                               G_2 = 2;
@@ -83,6 +84,7 @@ $$
 $$
 
 Podemos então montar a seguinte tabela:
+```
  ┌────┬───┬───┬───┬────┬────┐
  │ i  │ 1 │ 2 │ 3 │  4 │  5 │
  ├────┼───┼───┼───┼────┼────┤
@@ -90,6 +92,7 @@ Podemos então montar a seguinte tabela:
  ├────┼───┼───┼───┼────┼────┤
  │ Gi │ 1 │ 2 │ 8 │ 11 │ 20 │
  └────┴───┴───┴───┴────┴────┘
+```
 
 Este exercício está dividido em três partes.
 ### a
@@ -104,6 +107,7 @@ Exemplo:
 
 ### c
 Faça um programa que lê um inteiro `n > 2` e imprime os valores
+
 $$
    F_{n-2} + G_{n+200}  e F_{n+200} - G_{n-2}
 $$
