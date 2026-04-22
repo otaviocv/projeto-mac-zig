@@ -62,8 +62,11 @@ Compare com os resultados de sua calculadora!
 
 ## 7
 Dados `x` e $\epsilon$ reais, $\epsilon > 0$, calcular uma aproximação para sen x através da seguinte série infinita
+
 $$ sen x = x/1! - x^3/3! + x^5/5! - ... + (-1)^k x^(2k + 1)/(2k + 1)! $$
+
 incluindo todos os termos até que
+
 $$ | x^(2k + 1)| / (2k + 1)! < \epsilon $$
 
 Compare com os resultados de sua calculadora!
