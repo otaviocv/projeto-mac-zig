@@ -169,7 +169,7 @@ inteiros não-negativos e imprime o _mdc_ de todos os números da sequência.
 (POLI 97) Simule a execução do programa seguinte. Faça suas contas com duas
 casas de precisão. Não se preocupe com o formato da saída.
 
-```
+```c
 #include <stdio.h>
 
 float f1 (int x, int y) {

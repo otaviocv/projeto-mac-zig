@@ -29,10 +29,11 @@ A lista é dividida em nove seções:
 8. [Funções Parte III](./h_func_3.md)
 9. [Complementares](/i_complementares.md)
 
-Todos os exercícios foram transcritos para os arquivos markdown em ./exercicios/ melhorando
+Todos os exercícios foram transcritos para os arquivos markdown em
+[./exercicios/](./exercicios/) melhorando
 o máximo possível a apresentação usando os recursos do markdown do github.
 Cada solução acompanha uma versão simplificada do enunciado no topo do arquivo.
-Os arquivos são prefixados com letras de A..I para manter a ordem proposta em ordem
+Os arquivos são prefixados com letras de A a I para manter a ordem proposta em ordem
 lexicográfica.
 
 ## Abordagem

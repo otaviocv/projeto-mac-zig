@@ -176,7 +176,7 @@ Exemplos:
 
 ## 25
 Simule a execução do programa abaixo destacando a sua saída:
-```
+```c
 int main() {
     int a, b, total, soma, termo, i;
     printf("Digite um par de numeros: ");

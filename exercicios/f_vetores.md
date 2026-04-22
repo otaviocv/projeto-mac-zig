@@ -206,7 +206,7 @@ a soma do segmento é 33.
 ## 18
 (POLI 88) Simule a execução do programa abaixo.
 
-```
+```c
 #include <stdio.h>
 int main()
 { 
