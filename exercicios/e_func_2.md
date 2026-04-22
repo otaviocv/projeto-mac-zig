@@ -109,7 +109,13 @@ Exemplo:
 Faça um programa que lê um inteiro `n > 2` e imprime os valores
 
 $$
-   F_{n-2} + G_{n+200}  e F_{n+200} - G_{n-2}
+   F_{n-2} + G_{n+200} 
+$$
+
+e
+
+$$
+   F_{n+200} - G_{n-2}
 $$
 
 Seu programa deve obrigatoriamente utilizar a função do item anterior, mesmo que
