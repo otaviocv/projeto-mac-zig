@@ -23,10 +23,10 @@ intersecção dos `n` conjuntos.
 Por exemplo, se `n=3` e os conjuntos são ${1, 2, 4, 9}$, ${2, 4, 7, 8, 9}$ e ${5, 4, 9}$, a entrada será:
 
 ```
-3	          // O valor de n
+3           // O valor de n
 4           // V[0] = tamanho do primeiro conjunto
-1 2 4 9	    // V[1]  V[2]  V[3]  V[4]
-5	          // V[0] = tamanho do segundo conjunto
+1 2 4 9     // V[1]  V[2]  V[3]  V[4]
+5           // V[0] = tamanho do segundo conjunto
 2 4 7 8 9   // V[1]  V[2]  V[3]  V[4]  V[5]
 3           // V[0] = tamanho do terceiro conjunto
 5 4 9       // V[1]  V[2]  V[3]
@@ -35,7 +35,7 @@ Por exemplo, se `n=3` e os conjuntos são ${1, 2, 4, 9}$, ${2, 4, 7, 8, 9}$ e ${
 E o vetor INTER construído será
 
 ```
-INTER[0] = 2	 	            tamanho do conjunto
+INTER[0] = 2                tamanho do conjunto
 INTER[1] = 4  INTER[2] = 9  conjunto intersecção
 ```
 
@@ -77,6 +77,7 @@ Faça uma função `MAX` que recebe como entrada um inteiro `n`, uma matriz inte
 inteiros: `k`, `Lin` e `Col`. O inteiro `k` é um maior elemento de $A$ e é igual a `A[Lin,Col]`.
 
 Exemplo:
+
 $$
 se
 
@@ -165,7 +166,7 @@ elemento mínimo entre `X[k], X[k+1], ..., X[n-1]`.
 Usando a função do item anterior coloque os elementos de um vetor em ordem crescente.
 
 ## 10
-Para encontrar uma raiz de um polinômio $p(x) = a_0 + a_1x + ... + a_{nxn}, (n > 2)$, pode-se aplicar
+Para encontrar uma raiz de um polinômio $p(x) = a_0 + a_1x + ... + a_{n}x^n, (n > 2)$, pode-se aplicar
 o método de [Newton](https://pt.wikipedia.org/wiki/M%C3%A9todo_de_Newton%E2%80%93Raphson), que consiste em
 refinar uma aproximação inicial $x_0$ dessa raiz através da expressão:
 
@@ -179,7 +180,7 @@ Usualmente, repete-se esse refinamento até que
 $|x_{n+1} - x_n | < \epsilon$,
 $\epsilon > 0$, ou até que `m` iterações tenham sido executadas.
 
-Dados um polinômio $p(x) = a_0 + a_1x + ... + a_{nxn}$, uma aproximação inicial $x_0$ da
+Dados um polinômio $p(x) = a_0 + a_1x + ... + a_{n}x^n$, uma aproximação inicial $x_0$ da
 raiz de $p(x)$, $\epsilon > 0$ e o número máximo de iterações que devem ser executadas,
 determine uma aproximação da raiz de $p(x)$ pelo método de Newton.
 
@@ -215,9 +216,7 @@ A =
  0 & 18 &  1 \\
  0 & 10 &  1 \\
 \end{bmatrix}
-
 tem como saída
-
 \begin{bmatrix}
 -1 & -3 &  2 \\
  0 & -2 &  3 \\
@@ -246,9 +245,7 @@ DATA =
  6 &  2 & 1989 \\
  1 & 10 & 1973 \\
 \end{bmatrix}
-
 tem como saída
-
 \begin{bmatrix}
 13 & 12 & 1941 \\
 21 &  4 & 1965 \\
@@ -280,7 +277,7 @@ Coloque os nomes dessa matriz em ordem alfabética usando as funções descritas
 ### a
 Escreva uma função que recebe como parâmetros uma matriz real $A_{nxm}$,
 e uma posição `(i,j)` da matriz, e calcula a média aritmética dos vizinhos de
-`(i,j)`, ou seja, a média entre $A_{i-1,j}, A_{i+1,j}, A_{i,j+1}, A_{i,j+1}.
+`(i,j)`, ou seja, a média entre $A_{i-1,j}, A_{i+1,j}, A_{i,j+1}, A_{i,j+1}$.
 
 Desconsidere os vizinhos que não pertencem a matriz (por exemplo, os vizinhos de
 `(0, 0)` são somente `(0,1)` e `(1,0)`).
@@ -291,7 +288,7 @@ devolve uma matriz $A^média$, onde $a_{ij}^{média} é a média aritmética dos
 vizinhos de `(i,j)`. Para isto, utilize a função do item anterior.
 
 ### c
-Escreva um programa que lê uma matriz real $A_{nxm}, e um número inteiro `k`;
+Escreva um programa que lê uma matriz real $A_{nxm}$, e um número inteiro `k`;
 utilizando a função do item anterior, o programa deve transformar a matriz `k` vezes,
 imprimindo a matriz inicial e depois de cada transformação.
 
@@ -318,7 +315,7 @@ Escreva uma função que recebe como parâmetros um inteiro `n`, um vetor `V` co
 verifica se em `V` ocorrem todos os inteiros de `1` a `n`.
 
 ### b
-Usando a função acima, verifique se uma dada matriz inteira $A_{nxn} é um quadrado latino de ordem `n`.
+Usando a função acima, verifique se uma dada matriz inteira $A_{nxn}$ é um quadrado latino de ordem `n`.
 
 ## 15
 ### a
@@ -331,8 +328,8 @@ binária dos números `n` e `m`, considere a seguinte matriz $A$ de caracteres:
 $$
 a_{ij} = 
 \begin{cases}
-'*' se Repr_N[i] = 1 e Repr_M[i] = 1    \\
-' ' case contrário                      \\
+'*' se, Repr_N[i] = 1, e, Repr_M[i] = 1    \\
+'\quad' caso, contrário                        \\
 \end{cases}
 $$
 
