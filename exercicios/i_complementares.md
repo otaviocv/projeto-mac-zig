@@ -16,6 +16,67 @@ Exemplo: Na sequência
 a subsequência sublinhada é máxima e tem comprimento 4.
 
 ## 2
+Ajude um rato a encontrar um pedaço de queijo num labirinto como o do desenho abaixo:
+
+```
+          ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┐
+queijo -> │   │   │ x │ x │   │   │   │   │   │   │   │
+          ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
+          │   │ x │   │   │ x │   │ x │   │ x │ x │   │
+          ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
+          │   │   │ x │   │ x │   │ x │   │   │   │ x │
+          ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
+          │   │ x │   │ x │   │   │   │ x │ x │   │   │
+          ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
+          │   │   │   │ x │   │ x │   │   │   │ x │   │
+          ├───┼───┼───┼───┼───┼───┼───┼───┼───┼───┼───┤
+          │   │ x │   │   │   │   │   │   │ x │   │   │ <- rato
+          └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
+```
+
+Um labirinto desses pode ser representado por uma matriz retangular $L$, cujo elemento $l_{ij}
+vale 0 ou -1 conforme a casa correspondente do labirinto seja uma passagem livre ou uma parede,
+respectivamente.
+
+Um método geral para resolver esse problema consiste em marcar com o número $k$ ($k = 1,2, ...$)
+todas as casas livres que estejam a exatamente $k-1$ passos de distância do queijo, pelo caminho
+mais curto possível. Suponha que, a cada passo, o rato possa se deslocar de apenas uma casa na
+vertical ou na horizontal. Então, rotula-se inicialmente a posição do queijo com `1` e para cada
+$k>2$ examinam-se todas as casas livres do labirinto, marcando-se com `k` aquelas ainda não marcadas
+e que sejam adjacentes a alguma casa marcada com $k-1$. A marcação continua até ser atingido um valor
+de $k$ (28 no exemplo abaixo) tal que nenhuma casa esteja em condições de ser marcada.
+Ao final da marcação teremos a seguinte matriz, supondo o queijo em (5,10):
+
+```
+ ┌────┬────┬────┬────┬────┬────┬────┬────┬────┬────┬────┐
+ │ 26 │ 27 │ -1 │ -1 │ 12 │ 11 │ 10 │  9 │ 10 │ 11 │ 12 │
+ ├────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤
+ │ 25 │ -1 │  0 │  0 │ -1 │ 12 │ -1 │  8 │ -1 │ -1 │ 13 │
+ ├────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤
+ │ 24 │ 25 │ -1 │  0 │ -1 │ 13 │ -1 │  7 │  6 │  5 │ -1 │
+ ├────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤
+ │ 23 │ -1 │ 21 │ -1 │ 15 │ 14 │ 15 │ -1 │ -1 │  4 │  3 │
+ ├────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤
+ │ 22 │ 21 │ 20 │ -1 │ 16 │ -1 │ 16 │ 17 │ 18 │ -1 │  2 │
+ ├────┼────┼────┼────┼────┼────┼────┼────┼────┼────┼────┤
+ │ 23 │ -1 │ 19 │ 18 │ 17 │ 18 │ 17 │ 18 │ -1 │  2 │  1 │
+ └────┴────┴────┴────┴────┴────┴────┴────┴────┴────┴────┘
+```
+
+O caminho mais curto até o queijo pode então ser determinado, partindo-se da posição do rato e passando
+a cada etapa para uma casa adjacente cuja numeração seja menor do que a atual. Por exemplo, partindo de
+`[0,0]` o rato precisará percorrer pelo menos 26 casas para chegar ao queijo:
+
+```
+[0,0], [1,0], [2,0], [3,0], [4,0], [4,1], [4,2], ..., [4,10], [5,10].
+```
+
+Dados o labirinto (matriz $L$ com elementos `0` e `-1`) e as posições do rato e do queijo, determine o
+caminho mais curto que o rato deve percorrer até encontrar o queijo, se tal caminho existir.
+
+Sugestão: Escreva uma função que efetua a marcação (recebendo como parâmetros a matriz $L$, suas dimensões
+e a posição do queijo) e um outro que imprime o caminho (recebendo como parâmetros a matriz $L$ já marcada,
+suas dimensões e a posição inicial do rato).
 
 ## 3
 Considere `n` cidades numeradas de `0` a `n-1` que estão interligadas por uma série de estradas de mão única.
@@ -166,6 +227,7 @@ tal sequência.
 ### a
 Faça um programa cuja saída são todas as possíveis maneiras de dispormos 8 rainhas em um tabuleiro de xadrez de tal maneira
 que elas não se ataquem. Por exemplo uma das possíveis maneiras de dispor as rainhas é a seguinte:
+
 ```
 ┌───┬───┬───┬───┬───┬───┬───┬───┐
 │ R │   │   │   │   │   │   │   │
