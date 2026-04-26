@@ -34,7 +34,7 @@ queijo -> │   │   │ x │ x │   │   │   │   │   │   │   │
           └───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┘
 ```
 
-Um labirinto desses pode ser representado por uma matriz retangular $L$, cujo elemento $l_{ij}
+Um labirinto desses pode ser representado por uma matriz retangular $L$, cujo elemento $l_{ij}$
 vale 0 ou -1 conforme a casa correspondente do labirinto seja uma passagem livre ou uma parede,
 respectivamente.
 
@@ -189,6 +189,94 @@ O programa deve imprimir um relatório contendo:
   - a forma final das matrizes $A$ e $B$.
 
 ## 5
+(POLI 83) Dado um mapa contendo vários países, desejamos colori-lo com o menor número possível de cores, de tal
+maneira que países vizinhos tenham cores distintas. Já foi demonstrado que qualquer mapa pode ser colorido com 4
+cores diferentes. Além disso, existem mapas que não podem ser coloridos com menos do que 4 cores, como por exemplo
+o seguinte mapa com 8 países:
+
+![Mapa de 8 países](./.svg/i_complementares_5_mapa_de_8_paises.svg)
+
+Faça um algoritmo que, dado um mapa com `n` países e 4 cores distintas, forneça como resposta uma cor para
+cada país, de forma que dois países vizinhos não possuam a mesma cor. Em `C` você pode declarar
+```
+enum cor = {verde, amarelo, vermelho, azul, nenhuma}
+```
+_Em [Zig também](https://zig.guide/language-basics/enums/)._
+
+Os dados para o problema são os seguintes:
+
+- um número natural `n` representando o número de países (que são numerados de 0 a n-1);
+- um número natural `m < n` representando o número de vizinhos máximo que um país pode ter;
+- uma matriz natural $VIZ_{nxm}$ representando o mapa da seguinte maneira: os primeiros
+  elementos da linha `i` são os números dos vizinhos do país `i` de número menor que `i`,
+  o resto da linha é preenchida com -1. Por exemplo, para o mapa desenhado abaixo
+  ($n = 6$) teríamos a seguinte matriz $VIZ$:
+
+$$
+\begin{bmatrix}
+-1 & -1 & -1 & -1 & -1 \\
+ 0 & -1 & -1 & -1 & -1 \\
+ 1 &  0 & -1 & -1 & -1 \\
+ 2 &  0 & -1 & -1 & -1 \\
+ 0 &  1 &  3 & -1 & -1 \\
+ 1 &  2 &  3 &  4 & -1 \\
+\end{bmatrix}
+$$
+
+![Mapa de 6 países](./.svg/i_complementares_5_mapa_de_6_paises.svg)
+
+Construa o algoritmo seguindo o seguinte roteiro:
+
+### a
+Escreva uma _função lógica_ de nome **color** que recebe como parâmetros:
+- um natural `p` (representando o número de um país);
+- um natural `m`;
+- uma cor `c`;
+- um vetor inteiro $VIZPA$, de `m` elementos (representando os vizinhos do país `p` -- de número menor que `p` -- da mesma
+  forma que nas linhas da matriz $VIZ$);
+- um vetor $COR$ (representando as cores já atribuídas aos países de número menor que `p`).
+
+A função deve assumir _falso_ se o país `p` não pode ser colorido com a cor `c` e assumir o valor _verdadeiro_ em caso contrário.
+
+### b
+Escreva uma _função_ de nome **pintar** que recebe como parâmetros:
+- um natural `p` (representando o número de um país);
+- um natural `m`;
+- um vetor natural $VIZPA$ de `m` elementos (representando os vizinhos do país `p`,
+  da mesma forma que nas linhas da matriz $VIZ$);
+- um vetor $COR$ (representando as cores já atribuídas aos países de número menor que `p`).
+
+A função deve assumir o valor da menor cor com a qual é possível colorir o país `p` ou assumir o valor `nenhuma`
+se não for possível colorir o país `p` com nenhuma das 4 cores. Para fazer esta função use a função **color** do
+item (a) (mesmo que você não a tenha feito).
+
+### c
+Escreva uma função de nome recor com os seguintes parâmetros:
+
+1. parâmetros de entrada:
+  - um natural `p` (representando o número de um país);
+  - um natural `m`;
+  - uma matriz natural $VIZ_{nxm}$ (representando o mapa da maneira dada na descrição do problema);
+  - um vetor $COR$ (representando as cores já atribuídas aos países de número menor que `p`).
+2. parâmetros de saída:
+  - um natural `país` (representando o número de um país);
+  - `ncor` (representando uma cor).
+
+A função deve colocar em `país` o maior número menor que `p` tal que este país possa ser colorido com uma cor maior
+que sua cor original (dada no vetor $COR$). Em ncor deve ser colocada esta nova cor. Eventualmente pode haver mais
+de uma possível resposta para `ncor`. A função deve colocar em `ncor` a menor cor entre elas. Para fazer esta função
+use a função **color** do item (a), mesmo que você não a tenha feito.
+
+### d
+Faça um algoritmo que lê e imprime os naturais `n` e `m` e uma matriz de vizinhança $VIZ_{nxm}$ e fornece como
+resposta um vetor $COR$ de `n` elementos onde `COR[i]` representa a cor do país `i`, de forma que países vizinhos
+tenham cores diferentes. (Você deve usar somente 4 cores). Use a função recor do item (c) e a função pintar do item
+(b), mesmo não as tendo feito.
+
+Sugestão: Você deve dar a menor cor ao país de número 0 e para os países de números `1` a `n-1` dar a menor cor possível.
+Se ao tentar colorir algum país você verificar que não é possível lhe atribuir nenhuma das 4 cores, você deve alterar
+a cor de algum país colorido anteriormente e recomeçar a coloração a partir do país que teve a cor alterada.
+
 ## 6
 No _jogo dos oito ladrilhos_ nós temos oito números colocados em uma matriz 3x3.
 Uma possível configuração do jogo é mostrada abaixo:
