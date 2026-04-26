@@ -96,7 +96,7 @@ Col = 2 \\
 \end{cases}
 $$
 
-Obs.: Se o elemento máximo ocorrer mais de uma vez, indique em `Lin` e `Col` qualquer uma das possíveis posições.
+Observação: Se o elemento máximo ocorrer mais de uma vez, indique em `Lin` e `Col` qualquer uma das possíveis posições.
 
 ### b
 Faça um programa que, dado um inteiro `n` e uma matriz quadrada de ordem `n`, cujos elementos são todos inteiros positivos,
@@ -338,15 +338,546 @@ $$
 Faça um programa que recebe `n` e `m`, e constrói a matriz $A$ descrita acima, usando o item (a).
 
 ## 16
+(POLI 96) Dada uma matriz real quadrada $A$ de ordem `n` e um inteiro positivo `k`, define-se a aproximação
+da matriz real $e^A$ pela soma abaixo:
+
+$$
+e^A = I_n + A + \frac{A^2}{2!} + \frac{A^3}{3!} + ... + \frac{A^k}{k!}
+$$
+
+Sendo $I_n$ a matriz identidade de ordem `n`.
+
+### a
+Faça uma função que recebe como parâmetros um inteiro `n` e duas matrizes quadradas reais $X$ e $Y$ de ordem `n`.
+Esta função devolve em uma matriz $Z$, também passada como parâmetro, a soma das matrizes $X$ e $Y$.
+
+### b
+Escreva uma função que recebe como parâmetro um número inteiro `n`, um número real `c` e uma matriz $X_{nxn}$.
+A função devolve em uma matriz $Y$, também passada como parâmetro, o produto do número `c` pela matriz $X$. Ou seja,
+
+$$
+Y_{i,j} = c X_{i,j} \quad para \quad 0 \le i \le n-1 \quad e \quad 0 \le j le n-1
+$$
+
+### c
+Escreva uma função que recebe como parâmetros um inteiro `n` e duas matrizes quadradas reais $X_{nxn}$ e $Y_{nxn}$.
+Esta função devolve em uma matriz $Z$, também passada como parâmetro, o produto das matrizes $X$ e $Y$.
+
+### d
+Faça um programa que, dados dois inteiros `n` e `k` e uma matriz real quadrada $A_{nxn}$, determina uma aproximação da
+matriz real $e^A$ utilizando obrigatoriamente as três funções mencionadas anteriormente.
+
 ## 17
+(POLI 86) Este problema consta de três partes:
+
+### a
+Escreva uma função de nome **Início** com os seguintes parâmetros de entrada:
+
+- um vetor alfanumérico $V$ com `n` elementos;
+- um inteiro `n`.
+
+O valor da função deve ser o **índice** da posição onde se inicia a última palavra de $V$
+(isto é, o índice da primeira letra dessa palavra).
+
+Exemplo:
+
+| E | S | S | E |   | É |   | F | Á | C | I | L | ! |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
+O valor da função deve ser 7.
+
+### b
+Escreva uma função de nome **Insere** com os seguintes parâmetros:
+
+- uma matriz alfanumérica $T$;
+- dois inteiros `m` e `n`;
+- um inteiro `k`.
+
+A função insere uma nova linha preenchida com brancos, entre as linhas `k` e `k+1` da matriz $T$, devolvendo a nova matriz $T_{(m+1)xn}$.
+
+### c
+Faça um programa que:
+- lê e imprime dois inteiros `m` e `n` e uma matriz alfanumérica $A_{mxn}$ onde cada elemento contém um único caractere;
+- elimina (conforme explicado abaixo) as "quebras" de palavras entre uma linha e outra, do texto armazenado em $A$;
+- imprime o novo conteúdo da matriz $A$.
+
+Diz-se que existe "quebra" de palavras entre uma linha e outra somente quando o último caractere da linha e o primeiro da
+linha seguinte são ambos diferentes de branco.
+
+Exemplo:
+
+| O |   | Q | U | E |   | É |   | B | O | M |   | A |   | G | E |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| N | T | E |   | F | A | T | U | R | A | , |   | O |   | Q | U |
+| E |   | É |   | R | U | I | M |   | A |   | G | E | N | T | E |
+|   | E | S | C | O | N | D | E | . |   |   |   |   |   |   |   |
+
+A eliminação da "quebra" deve ser feita inserindo-se uma nova linha, que será ocupada apenas pela palavra "quebrada".
+As posições anteriormente ocupadas pela palavra devem passar a conter brancos. Supõe-se que qualquer palavra do texto
+caiba inteiramente em uma linha.
+
+No exemplo acima, o novo conteúdo da matriz $A$, após eliminar a "quebra" da palavra GENTE, seria:
+
+| O  |   | Q | U  | E |   | É |   | B  | O  | M  |    | A  |    |    |    |
+|----|---|---|----|---|---|---|---|----|----|----|----|----|----|----|----|
+| G  | E | N | T  | E |   |   |   |    |    |    |    |    |    |    |    |
+|    |   |   |    | F | A | T | U | R  | A  | ,  |    | O  |    | Q  | U  |
+| E  |   | É |    | R | U | I | M |    | A  |    | G  | E  | N  | T  | E  |
+|    | E | S | C  | O | N | D | E | .  |    |    |    |    |    |    |    |
+
+Use obrigatoriamente as funções definidas nos itens (a) e (b) (mesmo que você não as tenha feito).
+
+Observação: no texto existe pelo menos um branco separando duas palavras consecutivas, mesmo que elas estejam em linhas diferentes.
+
 ## 18
+Considere um exame de vestibular em que as questões são do tipo teste. Deseja-se obter uma lista com o nome,
+o número de identificação e o número de pontos de cada um dos candidatos, em ordem decrescente de pontos.
+A resolução deste problema será dividida em três partes:
+
+### a
+Escreva uma função Pontos com os seguintes parâmetros:
+
+- um inteiro `XN`;
+- um vetor inteiro $XResp$, onde `XResp[i]` é a resposta à questão `i` dada por um candidato;
+- um vetor inteiro $XGab$,  onde `XGab[i]`  é a resposta correta à questão `i`.
+
+O valor que esta função deve assumir é o número de pontos feitos pelo candidato cujas respostas estão armazenadas em $XResp$.
+
+### b
+Escreva uma _função_ **Insere** com os seguintes parâmetros:
+
+- um vetor $A$ contendo as informações de vários candidatos: nome,
+  número de identificação e número de pontos,
+  classificado em ordem decrescente pelo número de pontos;
+- um inteiro `NA` que representa o número de elementos de $A$;
+- _InfoCandidato_ contendo as informações de um candidato.
+
+Esta função insere o candidato _InfoCandidato_ no vetor $A$,
+de modo que os candidatos continuem armazenados por ordem decrescente de pontos.
+
+### c
+Escreva um programa que recebe como dados:
+
+- um inteiro `n`, que representa o número de questões de um exame vestibular;
+- um vetor inteiro $Gab$, contendo o gabarito das `n` questões;
+- um inteiro `m`, que é o número de candidatos que prestam o vestibular;
+- o nome de cada candidato, o seu número de identificação e suas respectivas respostas.
+
+e constrói um vetor contendo o nome, o número de identificação e o número de pontos alcançados por cada candidato,
+em ordem decrescente de pontos. Utilize obrigatoriamente as funções Pontos e Insere, mesmo que você não as tenha feito.
+
 ## 19
+POLI 96) Uma função matemática pode ser representada por um vetor.
+Por exemplo, com `n = 5` e o vetor de tamanho `n` `[0.0, 0.5, 1.0, 1.5, 2.0]` estamos representando a função
+$f(i) = i/2, \quad i = 0, 1, 2, 3, 4$.
+
+O alisamento de uma função é definido como:
+ 
+- $$ g(i) = \frac{f(i-1) + f(i) + f(i+1)}{3}, \quad para \quad 1 \le i \le n-2 $$;
+- $$ g(0) = g(1) $$;
+- $$ g(n-1) = g(n-2) $$.
+
+Para o exemplo acima, temos:
+
+| 0.0     | 0.5     | 1.0 | 1.5     | 2.0     | função f        |
+|---------|---------|-----|---------|---------|-----------------|
+| 0.5     | 0.5     | 1.0 | 1.5     | 1.5     | alisamento g    |
+| 0.66... | 0.66... | 1.0 | 1.33... | 1.33... | alisamento de g |
+
+Observação: Não utilize variáveis globais para escrever as funções abaixo.
+
+### a
+Escreva uma função **alisa** que recebe um vetor real $F$ com `n` elementos e devolve um
+vetor $G$ contendo o alisamento da função representada em $F$.
+
+### b
+Escreva uma função **realisa** que recebe `m`, `n` inteiros e um vetor $F$ de n números reais
+e retorne em uma matriz de números reais $A_{mxn}$ os `m` alisamentos sucessivos da função
+representada em $F$. Cada vetor deverá ser armazenado em um linha da matriz.
+
+### c
+Escreva uma função avalia que recebe os números inteiros `m`, `n` e um vetor $F$ de `n` números
+reais e, utilizando obrigatoriamente a função do item anterior (se não o fez, escreva apenas
+o protótipo) retorne quais são os valores máximo e mínimo da representação do `m`-ésimo alisamento
+de $F$.
+
 ## 20
+Simule a execução do seguinte programa, destacando a sua saída.
+
+```c
+#include <stdio.h>
+
+/* Variavel Global */
+int i;
+
+void p1(int x)
+{ 
+  i = i + 1; 
+  x = x + 2;
+  printf("%d\n", x);
+}
+
+void p2(int *x)
+{ 
+  i  =  i + 1; 
+  *x = *x + 2;
+  printf("%d\n", *x);
+}
+
+int main()
+{ 
+  /* Variavel Local */
+  int a[2];
+
+  a[0] = 10; 
+  a[1] = 20;
+  printf("%d %d\n", a[0], a[1]);
+  i = 0; 
+  p1(a[i]);
+  printf("%d %d\n", a[0], a[1]);
+  a[0] = 10; 
+  a[1] = 20;
+  i = 0; 
+  p2(&a[i]);
+  printf("%d %d\n", a[0], a[1]);
+  return 0;
+}
+```
+
+[Implementação em C](../src/h_func_3/ex_20.c)
+
+[Resultado da simulação](../src/h_func_3/ex_20_output.txt)
+
 ## 21
+(POLI 87) Simule a execução do programa abaixo destacando a sua saída:
+
+> [!NOTE]
+> A função _constroi_ está faltando! Não é possível executar o código
+> desse jeito.
+
+```c
+#include <stdio.h>
+
+int main()
+{ 
+  int m, x, nv, i, k, achou, b[50], v[50];
+
+  printf("Digite o tamanho da sequencia: ");
+  scanf("%d", &m); 
+  printf("Tamanho = %d\n", m);
+  for (i = 0; i < m; i++) { 
+    scanf("%d", &b[i]); 
+    printf("%d ", b[i]); 
+  }
+  printf("\n");
+  i = 0; 
+  achou = 0;
+  while (!achou && (i<m)) { 
+    constroi(b, m, b[i], v, &nv);
+    printf("Elemento = %d\n", b[i]);
+    for (k = 0; k < nv; k++) 
+      printf("%d ", v[k]);
+    printf("\n"); 
+    printf("Total = %d\n", nv);
+    if (nv == m/2) 
+      achou = 1;
+    else 
+      i = i + 1; 
+  } 
+  if (achou) {  
+    printf("Achou o %d\n", b[i]);
+    for (k = 0; k < nv; k++) 
+      printf("%d ", b[v[k]]);
+    printf("\n");
+  } 
+  constroi(b, m, 20, v, &nv);
+  printf("Elemento = 20\n");
+  for (k = 0; k < nv; k++) 
+    printf("%d ", v[k]);
+  printf("\n"); 
+  return 0;
+}
+```
+
+Dados:
+```
+6
+25 13 18 37 12 10
+```
+
+[Implementação em C](../src/h_func_3/ex_21.c)
+
+[Resultado da simulação](../src/h_func_3/ex_21_output.txt)
+
 ## 22
+(POLI 88) Simule a execução do programa abaixo destacando a sua saída:
+
+```c
+#include <stdio.h>
+#define max 50
+
+void imprime(int a[][max], int n)
+{ 
+  int i, j;
+  for (i = 0; i < n; i++) { 
+    for (j = 0; j < n; j++) 
+      printf("%2d ", a[i][j]);
+    printf("\n");
+  }
+}
+
+void soma(int a[][max], int b[][max], int n)
+{ 
+  int i, j;
+
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++) 
+      a[i][j] = a[i][j] + b[i][j]; 
+}
+
+int main()
+{ 
+  int i, j, n, a[max][max], b[max][max];
+
+  printf("Digite n: ");
+  scanf("%d", &n); 
+  printf("n = %d\n", n);
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      scanf("%d", &a[i][j]);
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      scanf("%d", &b[i][j]);
+  imprime(a, n); 
+  imprime(b, n);  
+  soma(a, b, n);
+  imprime(a, n); 
+  imprime(b, n);
+  return 0;
+}
+```
+
+Dados:
+```
+2
+4 1
+-2 8
+2 -1
+5 4
+```
+
+[Implementação em C](../src/h_func_3/ex_22.c)
+
+[Resultado da simulação](../src/h_func_3/ex_22_output.txt)
+
 ## 23
+(POLI 96) Simule a execução do seguinte programa, mostrando todos os valores intermediários gerados
+para cada variável e destacando a sua saída.
+
+```c
+#include <stdio.h>
+
+int g;
+
+int fa(int m[20][20], int a, int cte, int *p1, int p2)
+{ 
+  int i, j;
+
+  g = *p1;
+  *p1 = p2;
+  p2 = g;
+  for (i = 0; i < a; i++)
+    for (j = 0; j < a; j++)
+      m[i][j] = (3*i+j+cte)%5;
+  printf("%d %d\n", m[0][0], m[0][1]);
+  printf("%d %d\n", m[0][0], m[0][1]);
+  printf("%d %d %d\n", g, *p1, p2);
+  return(cte);
+}
+
+void flin(int m[], int i)
+{ 
+  int g;
+ 
+  for (g = 0; g < i; g++) 
+    printf("%d ", m[g]);
+  printf("\n");
+}
+
+void fpr(int m[20][20], int a)
+{
+  int i;
+
+  for (i = 0; i < a; i++) 
+    flin(m[i], a);
+}
+
+int main()
+{ 
+  int m[20][20], p1, p2, i, num;
+  char c, s[20];
+  float x, y;
+
+  g = 0;
+  printf("Digite um numero: ");
+  scanf("%d", &num);
+  printf("num = %d, g = %d\n", num, g);
+  p1 = 1;
+  p2 = 3;
+  m[0][0] = 1;
+  m[0][1] = 0;
+  m[1][0] = 0;
+  m[1][1] = 1;
+  fpr(m, 2);
+  printf("g = %d\n", g);
+  i = fa(m, 2, num, &p1, p2);
+  printf("%d %d %d %d\n", g, p1, p2, i);
+  printf("%d %d\n", m[0][0], m[0][1]);
+  printf("%d %d\n", m[0][0], m[0][1]);
+  c = 'a' + num + 1; 
+  printf("%c\n", c);
+  x = 5;
+  p2 = 3;
+  x = x/2;
+  y = p2/2;
+  printf("x = %3.1f, y = %3.1f\n", x, y);
+  s[0] = 'a';
+  s[1] = 'b';
+  s[2] = 'c';
+  s[3] = 'd';
+  s[4] = 'e';
+  s[5] = 'f';
+  s[6] = '\0';
+  printf("s = %s\n", s);
+  s[2+num%3] = '\0';
+  printf("s = %s\n", s);  
+  return 0;
+}
+```
+
+Dados:
+```
+6
+```
+
+[Implementação em C](../src/h_func_3/ex_23.c)
+
+[Resultado da simulação](../src/h_func_3/ex_23_output.txt)
+
 ## 24
+(POLI 87) Simule a execução do programa abaixo destacando a sua saída:
+```
+#include <stdio.h>
+#define max 50
+
+int indmax(float v[], int n)
+{ 
+  int j, indice;
+
+  indice = 0;
+  for (j = 1; j < n; j++)
+    if (v[j] > v[indice]) 
+      indice = j;
+  return(indice);
+}
+
+void roda(float v[], int n, int imaior)
+{ 
+  int j, k; 
+  float x[max];
+
+  k = imaior;
+  for (j = 0; j < k;   j++) 
+    x[j] = v[j];
+  for (j = 0; j < n-k; j++) 
+    v[j] = v[j+k];
+  for (j = 0; j < k;   j++) 
+    v[n-k+j] = x[j];
+}
+
+int main()
+{ 
+  int i, m, n, l, c, imaior;
+  float v[max], aux[max], a[max][max];
+
+  printf("Digite m e n.\n");
+  scanf("%d %d", &m, &n); 
+  printf("m = %d   n = %d\n", m, n);
+  printf("Digite uma matriz mxn.\n");
+  for (l = 0; l < m; l++) { 
+    for (c = 0; c < n; c++) { 
+      scanf("%f", &a[l][c]); 
+      printf("%4.1f ", a[l][c]); 
+    }
+    printf("\n");
+  }
+  for (l = 0; l < m; l++) { 
+    for (i = 0; i < n; i++) 
+      aux[i] = a[l][i];
+    imaior = indmax(aux, n); 
+    printf("%d\n", imaior);
+    roda(aux, n, imaior);
+    for (i = 0; i < n; i++)
+      a[l][i] = aux[i]; 
+    for (c = 0; c < n; c++) 
+      printf("%4.1f ", a[l][c]);
+    printf("\n");
+  }
+  for (l = 0; l < m; l++) 
+    v[l] = a[l][0];
+  imaior = indmax(v, m);
+  printf("\n%4.1f\n", a[imaior][0]);
+  return 0;
+}
+```
+
+Dados:
+```
+3 4
+1.9 1.0 -1.7 1.6
+0.0 2.5 -2.8 -3.5
+-0.5 -2.0 1.3 1.0
+```
+
+[Implementação em C](../src/h_func_3/ex_24.c)
+
+[Resultado da simulação](../src/h_func_3/ex_24_output.txt)
+
 ## 25
+Considere as seguintes declarações:
+
+```
+void m(int x[][2], int y[][2], int z[][2])
+{ 
+  z[0][0] = x[0][0] * y[0][0] + x[0][1] * y[1][0];
+  z[0][1] = x[0][0] * y[0][1] + x[0][1] * y[1][1];
+  z[1][0] = x[1][0] * y[0][0] + x[1][1] * y[1][0];
+  z[1][1] = x[1][0] * y[0][1] + x[1][1] * y[1][1];
+}
+```
+
+Dados: 
+
+$$
+A = 
+\begin{bmatrix}
+2 & 1 \\
+-1 & 3 \\
+\end{bmatrix}
+\quad
+e 
+\quad
+B = 
+\begin{bmatrix}
+3 & -1 \\
+1 & 2 \\
+\end{bmatrix}
+$$
+
+Simule as seguintes chamadas da função acima:
+- a. `m(A, B, C)`;
+- b. `m(A, B, A)`;
+- c. `m(A, B, B)`.
 
 ---
 
