@@ -80,15 +80,15 @@ Exemplo:
 
 $$
 se
-
+\quad
 \begin{bmatrix}
 3 & 7 & 1 \\
 1 & 2 & 8 \\
 5 & 3 & 4 \\
 \end{bmatrix}
-
+\quad
 então 
-
+\quad
 \begin{cases}
 k = 8   \\
 Lin = 1 \\
@@ -215,8 +215,9 @@ A =
 -1 & -3 &  2 \\
  0 & 18 &  1 \\
  0 & 10 &  1 \\
-\end{bmatrix}
-tem como saída
+\end{bmatrix} \quad
+tem \quad como \quad saída
+\quad
 \begin{bmatrix}
 -1 & -3 &  2 \\
  0 & -2 &  3 \\
@@ -244,8 +245,9 @@ DATA =
 21 &  4 & 1965 \\
  6 &  2 & 1989 \\
  1 & 10 & 1973 \\
-\end{bmatrix}
-tem como saída
+\end{bmatrix} \quad
+tem \quad como \quad saída
+\quad
 \begin{bmatrix}
 13 & 12 & 1941 \\
 21 &  4 & 1965 \\
@@ -328,8 +330,8 @@ binária dos números `n` e `m`, considere a seguinte matriz $A$ de caracteres:
 $$
 a_{ij} = 
 \begin{cases}
-'*' se, Repr_N[i] = 1, e, Repr_M[i] = 1    \\
-'\quad' caso, contrário                        \\
+'*' se \quad Repr_N[i] = 1 \quad e \quad  Repr_M[i] = 1    \\
+'\quad' caso \quad contrário                        \\
 \end{cases}
 $$
 
