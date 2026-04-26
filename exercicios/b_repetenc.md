@@ -68,6 +68,6 @@ a sequência seja alternante.
 
 [Solução](../src/b_repetenc/ex_08.zig)
 
-<br>
+---
 
 [Todos os exercícios](../exercicios)

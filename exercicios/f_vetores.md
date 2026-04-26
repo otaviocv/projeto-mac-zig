@@ -269,6 +269,6 @@ Dados:
 
 [Resultado da simulação](../src/f_vetores/ex_18_output.txt)
 
-<br>
+---
 
 [Todos os exercícios](../exercicios)

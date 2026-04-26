@@ -216,6 +216,6 @@ Dados:
 
 [Resultado da simulação](../src/a_inteiros/ex_25_output.txt)
 
-<br>
+---
 
 [Todos os exercícios](../exercicios)

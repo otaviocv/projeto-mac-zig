@@ -220,6 +220,6 @@ Dados:
 
 [Resultado da simulação](../src/d_func_1/ex_07_output.txt)
 
-<br>
+---
 
 [Todos os exercícios](../exercicios)

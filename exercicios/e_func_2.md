@@ -123,6 +123,6 @@ você não a tenha feito.
 
 [Solução](../src/e_func_2/ex_06.zig)
 
-<br>
+---
 
 [Todos os exercícios](../exercicios)

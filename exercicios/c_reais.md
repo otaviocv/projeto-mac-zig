@@ -120,6 +120,6 @@ pelas seguintes maneiras:
 
 [Solução](../src/c_reais/ex_12.zig)
 
-<br>
+---
 
 [Todos os exercícios](../exercicios)
