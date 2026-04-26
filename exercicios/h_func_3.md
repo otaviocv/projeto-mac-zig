@@ -286,7 +286,7 @@ Desconsidere os vizinhos que não pertencem a matriz (por exemplo, os vizinhos d
 
 ### b
 Escreva uma função que recebe como parâmetro uma matriz real $A_{nxm}$ e
-devolve uma matriz $A^média$, onde $a_{ij}^{média} é a média aritmética dos
+devolve uma matriz $A^{média}$, onde $a_{ij}^{média}$ é a média aritmética dos
 vizinhos de `(i,j)`. Para isto, utilize a função do item anterior.
 
 ### c
