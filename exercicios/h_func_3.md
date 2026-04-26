@@ -473,9 +473,9 @@ $f(i) = i/2, \quad i = 0, 1, 2, 3, 4$.
 
 O alisamento de uma função é definido como:
  
-- $$ g(i) = \frac{f(i-1) + f(i) + f(i+1)}{3}, \quad para \quad 1 \le i \le n-2 $$;
-- $$ g(0) = g(1) $$;
-- $$ g(n-1) = g(n-2) $$.
+- $ g(i) = \frac{f(i-1) + f(i) + f(i+1)}{3}, \quad para \quad 1 \le i \le n-2 $;
+- $ g(0) = g(1) $;
+- $ g(n-1) = g(n-2) $.
 
 Para o exemplo acima, temos:
 
