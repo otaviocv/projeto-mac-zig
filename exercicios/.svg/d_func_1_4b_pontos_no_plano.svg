@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <!-- eixo x -->
+  <line x1="0" y1="360" x2="360" y2="360" stroke="black" marker-end="url(#arrow)" stroke-width="2px"/>
+  <!-- ponta x -->
+  <polygon points="360,355 360,365 370, 360" style="fill:black;stroke:black;stroke-width:0"/>
+
+  <!-- eixo y -->
+  <line x1="40" y1="400" x2="40" y2="40" stroke="black" marker-end="url(#arrow)" stroke-width="2px"/>
+  <!-- ponta y -->
+  <polygon points="45,40 35,40 40, 30" style="fill:black;stroke:black;stroke-width:0"/>
+
+ <circle r="5" cx="40" cy="300" fill="black"/>
+ <text x="50" y="300" font-size="20" fill="black">(0,1)</text>
+
+ <circle r="5" cx="340" cy="300" fill="black"/>
+ <text x="350" y="300" font-size="20" fill="black">(5,1)</text>
+
+ <circle r="5" cx="160" cy="240" fill="black"/>
+ <text x="170" y="240" font-size="20" fill="black">(2,2)</text>
+
+ <circle r="5" cx="100" cy="120" fill="black"/>
+ <text x="110" y="120" font-size="20" fill="black">(1,4)</text>
+
+</svg>
