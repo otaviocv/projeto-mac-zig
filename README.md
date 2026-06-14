@@ -19,15 +19,17 @@ minha jornada com Zig.
 
 A lista é dividida em nove seções:
 
-1. [Inteiros](./exercicios/a_inteios.md)
-2. [Repetições encaixadas](./exercicios/b_repetenc.md)
-3. [Reais](./exercicios/c_reais.md)
-4. [Funções Parte I](./exercicios/d_func_1.md)
-5. [Funções Parte II](./exercicios/e_func_2.md)
-6. [Vetores](./exercicios/f_vetores.md)
-7. [Matrizes](./exercicios/g_matrizes.md)
-8. [Funções Parte III](./h_func_3.md)
-9. [Complementares](/i_complementares.md)
+1. [Inteiros](./exercicios/a_inteios.md) **(25/25 100%)**
+2. [Repetições encaixadas](./exercicios/b_repetenc.md) **(8/8 100%)**
+3. [Reais](./exercicios/c_reais.md) **(12/12 100%)**
+4. [Funções Parte I](./exercicios/d_func_1.md) **(7/7 100%)**
+5. [Funções Parte II](./exercicios/e_func_2.md) **(6/6 100%)**
+6. [Vetores](./exercicios/f_vetores.md) **(18/18 100%)**
+7. [Matrizes](./exercicios/g_matrizes.md) **(10/15 66.6%)**
+8. [Funções Parte III](./exercicios/h_func_3.md) **(0/25 0%)**
+9. [Complementares](./exercicios/i_complementares.md) **(0/8 0%)**
+
+**(86/124 69%)**
 
 Todos os exercícios foram transcritos para os arquivos markdown em
 [./exercicios/](./exercicios/) melhorando

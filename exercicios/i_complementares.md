@@ -344,3 +344,7 @@ de tal maneira que duas a duas elas não se ataquem.
 Dados `n` e `m` faça um programa que verifica se é possível dispor `m` rainhas em um tabuleiro `n x n` de tal forma que toda
 posição do tabuleiro é atacada por pelo menos uma rainha, em caso afirmativo o seu programa deve ainda imprimir
 uma disposição das rainhas em que isso ocorre.
+
+---
+
+[Todos os exercícios](../exercicios)
